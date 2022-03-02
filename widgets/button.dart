@@ -4,24 +4,23 @@ import 'package:html/dom.dart' as htmlParser;  // to print html chars
 class Button extends StatelessWidget {
   final Function() selectHandler;
   final String buttonText;
-  final Color color_text;
-  final Color background_color;
+  //final Color color_text;
+  //final Color background_color;
 
-  Button({required this.selectHandler, required this.buttonText, required this.color_text, required this.background_color});
+  Button({required this.selectHandler, required this.buttonText});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       child: RaisedButton(
-        color: this.background_color,
-        // textColor: Colors.white,
+        color: Colors.black,
         child: Text(
           htmlParser.DocumentFragment.html(buttonText).text.toString(),
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            color: color_text
+            color: Colors.red
           ),
         ),
         padding: const EdgeInsets.symmetric(vertical: 10.0),

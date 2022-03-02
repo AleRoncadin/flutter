@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 class elevatedButton extends StatelessWidget{
   final Function() selectHandler;
   final String myText;
-  final Color color;
+  //final Color color;
 
-  elevatedButton({required this.selectHandler, required this.myText, required this.color});
+  elevatedButton({required this.selectHandler, required this.myText});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class elevatedButton extends StatelessWidget{
           child: Text(
             myText,
           style: TextStyle(
-            color: color),
+            color: Colors.red),
             )
           );
   }

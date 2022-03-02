@@ -93,6 +93,32 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.of(context).pushNamed('/todoDescription', arguments: {
                 'todo': todos[index],
+                //UTILIZZO DELL'ALERT DIALOG INVECE CHE DI UNA SCHERMATA 
+            /*=> showDialog<String>(
+              context: context, 
+              builder: (BuildContext context) => 
+              AlertDialog(
+                title: Text(todos[index].title),
+                content: Text(todos[index].description),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'Cancel'),
+                     child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      _deleteItem(todos[index]);
+                      Navigator.pop(context, 'Delete');
+                    },
+                    child: const Text('Delete'),
+                  ),
+                ],
+              )
+              )*/
               });
             },
           );

@@ -6,11 +6,11 @@ import 'package:html/dom.dart' as htmlParser;  // to print html chars
 
 class TextDisplay extends StatelessWidget {
   final String myText;
-  final double fontSize;
-  final FontWeight fontWeight;
-  final TextAlign textAlign;
-  final Color color;
-  final Color textColor;
+  //final double fontSize;
+  //final FontWeight fontWeight;
+  //final TextAlign textAlign;
+  //final Color color;
+  //final Color textColor;
 
   TextDisplay({required this.myText, required this.fontSize, required this.fontWeight, required this.textAlign, required this.color, required this.textColor});
 
@@ -19,15 +19,15 @@ class TextDisplay extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(10),
-      color: color,
+      color: Colors.white,
       child: Text(
         htmlParser.DocumentFragment.html(myText).text.toString(),
         style: TextStyle(
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          color: textColor
+          fontSize: 20,
+          fontWeight: FontWeight.normal,
+          color: Colors.black
         ),
-        textAlign: textAlign
+        textAlign: TextAlign.center
       ),
     );
   }

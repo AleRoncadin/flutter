@@ -12,7 +12,7 @@ class TextDisplay extends StatelessWidget {
   //final Color color;
   //final Color textColor;
 
-  TextDisplay({required this.myText, required this.fontSize, required this.fontWeight, required this.textAlign, required this.color, required this.textColor});
+  TextDisplay({required this.myText});
 
   @override
   Widget build(BuildContext context) {
